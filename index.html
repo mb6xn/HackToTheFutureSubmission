@@ -9,32 +9,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Title</title>
+    <style>
+      #map {
+        height: 425px;
+      }
+    </style>
   </head>
   <body>
     <h1 align="center">Companies Map</h1>
+    <!-- <h>This is the map</h> -->
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40, lng: -100},
+            zoom: 4,
+            mapTypeId: 'roadmap',
+            heading: 90,
+            tilt: 45
+            });
+            theData();
+        }
+    </script>
 
-	<div style="float: left; background-color: green; width: 70%;">Div 1</div>
+  	<div style="float: left; background-color: green; width: 70%;"><div id="map"></div></div>
 
-    <div style="float: right; background-color: blue; width: 30%;">
+      <div style="float: right; background-color: blue; width: 30%;">
 
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Walmart</h4>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Walmart</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">Bentonville <small class="text-muted">, AR</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>White: 58%</li>
+            <li>Non-white: 42%</li>
+            <li>Men: 44%</li>
+            <li>Women: 56%</li>
+            <li>Green Energy Source: Various</li>
+          </ul>
+          <a href="https://corporate.walmart.com/global-responsibility/sustainability/" class="btn btn-lg btn-block btn-primary" role="button">Go to Company Website</a>
+        </div>
       </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">Bentonville <small class="text-muted">, AR</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>White: 58%</li>
-          <li>Non-white: 42%</li>
-          <li>Men: 44%</li>
-          <li>Women: 56%</li>
-          <li>Green Energy Source: Various</li>
-        </ul>
-        <a href="https://corporate.walmart.com/global-responsibility/sustainability/" class="btn btn-lg btn-block btn-primary" role="button">Go to Company Website</a>
-      </div>
-    </div>
 
-	</div>
+  	</div>
     <!-- <div class="container">
     	<div class="row">
 	        <div class="col-xs-6">
@@ -51,5 +70,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBACQhnQL7CNXc5ZHo0-h3-4MHaFRIrGO0&callback=initMap"></script>
   </body>
 </html>
