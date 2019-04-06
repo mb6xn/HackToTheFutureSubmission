@@ -29,26 +29,29 @@
             heading: 90,
             tilt: 45
             });
-            plotPoints();
+            // plotPoints();
         };
-        function plotPoints() {
-            locations = [[42, -102], [38, -98]];
-            console.log(locations.length)
-            for(i = 0; i < locations.length; i++){
-                console.log(i)
-                var myLatLong = new google.maps.LatLng(locations[i][0],locations[i][1]);
-                var thisCircle = new google.maps.Circle({
-                    strokeColor: '#FF0000',
-                    strokeOpacity: 0.8,
-                    strokeWeight: 2,
-                    fillColor: '#FF0000',
-                    fillOpacity: 0.35,
-                    map: map,
-                    center: myLatLong,
-                    radius: 50000
-                    });
-            }
-        };
+        // function plotPoints() {
+        //     locations = [[42, -102], [38, -98]];
+        //     console.log(locations.length)
+        //     for(i = 0; i < locations.length; i++){
+        //         var myLatLong = new google.maps.LatLng(locations[i][0],locations[i][1]);
+        //         var thisCircle = new google.maps.Circle({
+        //             strokeColor: '#FF0000',
+        //             strokeOpacity: 0.8,
+        //             strokeWeight: 2,
+        //             fillColor: '#FF0000',
+        //             fillOpacity: 0.35,
+        //             map: map,
+        //             center: myLatLong,
+        //             radius: 50000
+        //             });
+        //         alert(thisCircle.center);
+        //         google.maps.event.addListener(thisCircle, 'click', function() {
+        //             alert(this.center);
+        //         });
+        //     }
+        // };
     </script>
 
 
