@@ -36,25 +36,25 @@ function plotPoints(JSONdata) {
         // alert(thisCircle.center);
         // alert(myLatLong);
         var c = JSONdata[i];
-        JSONobj[myLatLong] = [c['Company'],c['white (%)'],c['non-white (%)'],c['men (%)'],c['women (%)'],c['Green Energy Source'],c['Sustainability Site']];
+        JSONobj[thisCircle.center] = [c['Company'],c['white (%)'],c['non-white (%)'],c['men (%)'],c['women (%)'],c['Green Energy Source'],c['Sustainability Site'],c['City'],c['State']];
         google.maps.event.addListener(thisCircle, 'click', function() {
-            alert(thisCircle.center);
-            alert(JSONobj[thisCircle.center]);
+            // alert(thisCircle.center);
+            // alert(JSONobj[thisCircle.center]);
             var info_box = document.getElementById('info');
             info_box.innerHTML = `
             <div class="card-header">
-          <h4 class="my-0 font-weight-normal">`+JSONobj[myLatLong][0]+`</h4>
+          <h4 class="my-0 font-weight-normal">`+JSONobj[thisCircle.center][0]+`</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">Bentonville <small class="text-muted">, AR</small></h1>
+          <h1 class="card-title pricing-card-title">`+JSONobj[thisCircle.center][7]+`<small class="text-muted">, `+JSONobj[thisCircle.center][8]+`</small></h1>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>White: `+JSONobj[myLatLong][1]+`%</li>
-            <li>Non-white: `+JSONobj[myLatLong][2]+`%</li>
-            <li>Men: `+JSONobj[myLatLong][3]+`%</li>
-            <li>Women: `+JSONobj[myLatLong][4]+`%</li>
-            <li>Green Energy Source: `+JSONobj[myLatLong][5]+`</li>
+            <li>White: `+JSONobj[thisCircle.center][1]+`%</li>
+            <li>Non-white: `+JSONobj[thisCircle.center][2]+`%</li>
+            <li>Men: `+JSONobj[thisCircle.center][3]+`%</li>
+            <li>Women: `+JSONobj[thisCircle.center][4]+`%</li>
+            <li>Green Energy Source: `+JSONobj[thisCircle.center][5]+`</li>
            </ul>
-          <a href="`+JSONobj[myLatLong][6]+`" class="btn b6n-lg btn-block btn-primary" role="button">Go to Company Website</a>
+          <a href="`+JSONobj[thisCircle.center][6]+`" class="btn b6n-lg btn-block btn-primary" role="button">Go to Company Website</a>
         </div>
             `;
         });
@@ -76,9 +76,9 @@ function processData(allText) {
     // }
     // alert(lines);
     //alert(allText);
-    alert(csvJSON(allText));
+    // alert(csvJSON(allText));
     var JSONdata = JSON.parse(csvJSON(allText));
-    alert(JSONdata[0]['women (%)']);
+    // alert(JSONdata[0]['women (%)']);
     plotPoints(JSONdata);
 }
 
