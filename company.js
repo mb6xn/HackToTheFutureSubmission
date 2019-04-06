@@ -11,9 +11,6 @@ $(document).ready(function() {
 
 function plotPoints(JSONdata) {
 	locations = [];
-	// alert("here");
-	// alert(JSONdata[0]['Latitude']);
-	// alert("here2");
 	for (i = 0; i < JSONdata.length-1; i++) {
 		// alert(JSONdata[i]['Latitude']);
 		locations.push([JSONdata[i]['Longitude'],-JSONdata[i]['Latitude']])
@@ -61,24 +58,7 @@ function plotPoints(JSONdata) {
     }
 };
 function processData(allText) {
-    // var record_num = 5;  // or however many elements there are in each row
-    // var allTextLines = allText.split(/\r\n|\n/);
-    // var entries = allTextLines[0].split(',');
-    // var lines = [];
-
-    // var headings = entries.splice(0,record_num);
-    // while (entries.length>0) {
-    //     var tarr = [];
-    //     for (var j=0; j<record_num; j++) {
-    //         tarr.push(headings[j]+":"+entries.shift());
-    //     }
-    //     lines.push(tarr);
-    // }
-    // alert(lines);
-    //alert(allText);
-    // alert(csvJSON(allText));
     var JSONdata = JSON.parse(csvJSON(allText));
-    // alert(JSONdata[0]['women (%)']);
     plotPoints(JSONdata);
 }
 
