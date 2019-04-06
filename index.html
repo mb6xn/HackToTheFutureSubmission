@@ -14,6 +14,7 @@
         height: 425px;
       }
     </style>
+
   </head>
   <body>
     <h1 align="center">Companies Map</h1>
@@ -28,9 +29,28 @@
             heading: 90,
             tilt: 45
             });
-            theData();
-        }
+            plotPoints();
+        };
+        function plotPoints() {
+            locations = [[42, -102], [38, -98]];
+            console.log(locations.length)
+            for(i = 0; i < locations.length; i++){
+                console.log(i)
+                var myLatLong = new google.maps.LatLng(locations[i][0],locations[i][1]);
+                var thisCircle = new google.maps.Circle({
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35,
+                    map: map,
+                    center: myLatLong,
+                    radius: 50000
+                    });
+            }
+        };
     </script>
+
 
   	<div style="float: left; background-color: green; width: 70%;"><div id="map"></div></div>
 
@@ -71,5 +91,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBACQhnQL7CNXc5ZHo0-h3-4MHaFRIrGO0&callback=initMap"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="company.js"></script>
+
+
   </body>
 </html>
