@@ -1,8 +1,8 @@
-Company,Coordinates,white (%),non-white (%),men (%),women (%),Green Energy Source,Sustainability Site
-Walmart,"36.3729° N, 94.2088° W",58,42,44,56,various,https://corporate.walmart.com/global-responsibility/sustainability/
-Microsoft ,"47.6740° N, 122.1215° W",58,35,25,75,solar wind,https://www.microsoft.com/en-us/environment
-Intel,"37.3541° N, 121.9552° W",50,50,74,26,various,https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility.html
-Google,"37.4220° N, 122.0841° W",48.5,51.5,66.8,33.2,"biogas, small-hydro, solar,  wind",https://sustainability.google/
-Apple,"37.3318° N, 122.0312° W",56,44,69,31,various,https://www.apple.com/environment/
-Wells Fargo,"35.2235° N, 80.8442° W",42,58,44,56,"solar,wind",https://www.wellsfargo.com/about/corporate-responsibility/environment/
-Cisco,"37.3382° N, 121.8863° W",50,50,74,26,"solar,wind",https://www.cisco.com/c/en/us/about/csr/impact/environmental-sustainability.html
+Company,Latitude,Longitude,white (%),non-white (%),men (%),women (%),Green Energy Source,Sustainability Site
+Walmart,94.2088° ,36.3729°,58,42,44,56,various,https://corporate.walmart.com/global-responsibility/sustainability/
+Microsoft ,122.1215° ,47.6740° ,58,35,25,75,solar wind,https://www.microsoft.com/en-us/environment
+Intel,121.9552°,37.3541° ,50,50,74,26,various,https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility.html
+Google,122.0841°,37.4220° ,48.5,51.5,66.8,33.2,"biogas, small-hydro, solar,  wind",https://sustainability.google/
+Apple,122.0312°,37.3318° ,56,44,69,31,various,https://www.apple.com/environment/
+Wells Fargo, 80.8442°,35.2235°,42,58,44,56,"solar,wind",https://www.wellsfargo.com/about/corporate-responsibility/environment/
+Cisco,121.8863°,37.3382° ,50,50,74,26,"solar,wind",https://www.cisco.com/c/en/us/about/csr/impact/environmental-sustainability.html
