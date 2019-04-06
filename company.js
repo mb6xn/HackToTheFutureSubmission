@@ -10,7 +10,7 @@ $(document).ready(function() {
 function plotPoints(JSONdata) {
 	locations = [];
 	for (i = 0; i < JSONdata.length; i++) {
-		locations.append([JSONdata[i]['latitude'],JSONdata[i]['longitude']])
+		locations.append([JSONdata[i]['Latitude'],JSONdata[i]['Longitude']])
 	}
     // locations = [[42, -102], [38, -98]];
     // console.log(locations.length)
