@@ -1,8 +1,8 @@
-Company,Latitude,Longitude,white (%),non-white (%),men (%),women (%),Green Energy Source,Sustainability Site
-Walmart,94.2088,36.3729,58,42,44,56,various,https://corporate.walmart.com/global-responsibility/sustainability/
-Microsoft ,122.1215,47.674,58,35,25,75,solar wind,https://www.microsoft.com/en-us/environment
-Intel,121.9552,37.3541,50,50,74,26,various,https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility.html
-Google,122.0841,37.422,48.5,51.5,66.8,33.2,"biogas, small-hydro, solar,  wind",https://sustainability.google/
-Apple,122.0312,37.3318,56,44,69,31,various,https://www.apple.com/environment/
-Wells Fargo,80.8442,35.2235,42,58,44,56,"solar,wind",https://www.wellsfargo.com/about/corporate-responsibility/environment/
-Cisco,121.8863,37.3382,50,50,74,26,"solar,wind",https://www.cisco.com/c/en/us/about/csr/impact/environmental-sustainability.html
+Company,Latitude,Longitude,white (%),non-white (%),men (%),women (%),Green Energy Source,Sustainability Site,City,State
+Walmart,94.2088,36.3729,58,42,44,56,various,https://corporate.walmart.com/global-responsibility/sustainability/,Bentonville,AR
+Microsoft ,122.1215,47.674,58,35,25,75,solar wind,https://www.microsoft.com/en-us/environment,Redmond,WA
+Intel,121.9552,37.3541,50,50,74,26,various,https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility.html,Santa Clara,CA
+Google,122.0841,37.422,48.5,51.5,66.8,33.2,biogas+small-hydrosolar+ wind,https://sustainability.google/,Mountain View,CA
+Apple,122.0312,37.3318,56,44,69,31,various,https://www.apple.com/environment/,Cupertino,CA
+Wells Fargo,80.8442,35.2235,42,58,44,56,solar+wind,https://www.wellsfargo.com/about/corporate-responsibility/environment/,San Francisco,CA
+Cisco,121.8863,37.3382,50,50,74,26,solar+wind,https://www.cisco.com/c/en/us/about/csr/impact/environmental-sustainability.html,San Jose,CA
