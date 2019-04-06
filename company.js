@@ -1,3 +1,5 @@
+JSONobj = {'(37.3382, -121.8863)': 'rand_txt'};
+
 $(document).ready(function() {
     $.ajax({
         type: "GET",
@@ -9,10 +11,15 @@ $(document).ready(function() {
 
 function plotPoints(JSONdata) {
 	locations = [];
-	for (i = 0; i < JSONdata.length; i++) {
-		locations.append([JSONdata[i]['Latitude'],JSONdata[i]['Longitude']])
+	// alert("here");
+	// alert(JSONdata[0]['Latitude']);
+	// alert("here2");
+	for (i = 0; i < JSONdata.length-1; i++) {
+		// alert(JSONdata[i]['Latitude']);
+		locations.push([JSONdata[i]['Longitude'],-JSONdata[i]['Latitude']])
 	}
-    // locations = [[42, -102], [38, -98]];
+	// alert(locations);
+    // locations = [[42.123, -102.25], [38, -98]];
     // console.log(locations.length)
     for(i = 0; i < locations.length; i++){
         var myLatLong = new google.maps.LatLng(locations[i][0],locations[i][1]);
@@ -24,11 +31,32 @@ function plotPoints(JSONdata) {
             fillOpacity: 0.35,
             map: map,
             center: myLatLong,
-            radius: 50000
+            radius: 20000
             });
-        alert(thisCircle.center);
+        // alert(thisCircle.center);
+        // alert(myLatLong);
+        var c = JSONdata[i];
+        JSONobj[myLatLong] = [c['Company'],c['white (%)'],c['non-white (%)'],c['men (%)'],c['women (%)'],c['Green Energy Source'],c['Sustainability Site']];
         google.maps.event.addListener(thisCircle, 'click', function() {
-            alert(this.center);
+            alert(thisCircle.center);
+            alert(JSONobj[thisCircle.center]);
+            var info_box = document.getElementById('info');
+            info_box.innerHTML = `
+            <div class="card-header">
+          <h4 class="my-0 font-weight-normal">`+JSONobj[myLatLong][0]+`</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">Bentonville <small class="text-muted">, AR</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>White: `+JSONobj[myLatLong][1]+`%</li>
+            <li>Non-white: `+JSONobj[myLatLong][2]+`%</li>
+            <li>Men: `+JSONobj[myLatLong][3]+`%</li>
+            <li>Women: `+JSONobj[myLatLong][4]+`%</li>
+            <li>Green Energy Source: `+JSONobj[myLatLong][5]+`</li>
+           </ul>
+          <a href="`+JSONobj[myLatLong][6]+`" class="btn b6n-lg btn-block btn-primary" role="button">Go to Company Website</a>
+        </div>
+            `;
         });
     }
 };
